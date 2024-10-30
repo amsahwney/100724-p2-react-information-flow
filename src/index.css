@@ -59,3 +59,7 @@ p {
     gap: 1em;
     width: 100%;
 }
+
+input {
+    margin: 1%;
+}

@@ -1,7 +1,10 @@
 import MonstersContainer from './MonstersContainer'
 import FavoriteMonstersContainer from './FavoriteMonstersContainer'
+import { useState } from 'react'
 
 function App() {
+
+  const [favMonsters, setFavMonsters] = useState( [ ] )
 
   return (
     <div className="App">
@@ -10,9 +13,9 @@ function App() {
 
       <div className="two-columns">
 
-        <MonstersContainer />
+        <MonstersContainer setFavMonsters={setFavMonsters}/>
 
-        <FavoriteMonstersContainer />
+        <FavoriteMonstersContainer favMonsters={favMonsters} setFavMonsters={setFavMonsters}/>
 
       </div>
 
